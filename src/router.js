@@ -37,7 +37,7 @@ export default new Router({
         // to - gde se redirektujemo, ka kojoj putanji/componenti (ka chat)
         // from - je sa koje url dolazimo,
         // next - je f-ja koju cemo koristiti kada zeimo da kazemo gde sledece zelimo da idemo
-        console.log(to.params.imeProps) // dakle zelimo da vidimo da li postoji neki props/params koji saljemo chat-u, i navedemo posle konretan na koji props mislimo, u ovom slucaju na imeProps. I sada ako unesemo ime neko, samo se u konzoli ovo stampa ali se ne redirektuje na Chat component. To je jer moramo da navedemo next() posle ovoga
+        // console.log(to.params.imeProps) // dakle zelimo da vidimo da li postoji neki props/params koji saljemo chat-u, i navedemo posle konretan na koji props mislimo, u ovom slucaju na imeProps. I sada ako unesemo ime neko, samo se u konzoli ovo stampa ali se ne redirektuje na Chat component. To je jer moramo da navedemo next() posle ovoga
         next()
 
         // ali mi zelimo samo ako postoji imeProps da pristupimo/redirektujemo na Chat komponent:

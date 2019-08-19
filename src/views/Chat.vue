@@ -54,7 +54,7 @@ export default {
         // 2. sada zelimo da stavimo listenter za osluskivanje tih poruka. Elem, listener se zove onSnapshot, odnosno kad god se desi neka promena u nasoj ref tj u nasoj bazi messages. Dakle kad se doda, apdejtuje, obrise, edituje, bilo koja promena, uzima se current snapshot baze
         ref.onSnapshot(snapshot => {
             // u snapshot promenkjivoj se sada nalazi sve sto je u bazi messages, ali nas ne zanima trenutno bas sve, vec samo trenutno promene. Mozemo dohvatiti te promene sa:
-            console.log(snapshot.docChanges()); // docChanges() momentalno dohvata trenutne promene u bazi. recimo ako dodam novu poruku (type: added), ako obrisem (type: removed) itd,tj te vrste promena se nalaze u type
+            // console.log(snapshot.docChanges()); // docChanges() momentalno dohvata trenutne promene u bazi. recimo ako dodam novu poruku (type: added), ako obrisem (type: removed) itd,tj te vrste promena se nalaze u type
             
             // kada se nasa aplikacija prvi put startuje, automastki saljemo initial snapshot nase baze, tako da mozemo da izlistamo docse i lupujemo kroz fields i outputujemo ih 
             snapshot.docChanges().forEach(change => {
